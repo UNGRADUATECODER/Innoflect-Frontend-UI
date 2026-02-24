@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { assets, company_logos } from '../assets';
+import { assets, company_logos } from '../../assets';
 
 const Navbar = () => {
   const [sidebaropen,setsidebaropen]=useState(false);
@@ -14,7 +14,7 @@ const Navbar = () => {
   },[])
 
   return (
-    <nav className={`fixed top-0  z-50 w-full  flex items-center justify-between h-16 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 py-2  font-medium transition-all duration-300  ${scrolled ? "bg-emerald-600 shadow-lg" : "bg-transparent"}`}>
+    <nav className={`fixed top-0 z-50 w-full flex items-center justify-between h-16 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 py-2 font-medium transition-all duration-300 ${scrolled ? "bg-white shadow-md text-gray-900" : "bg-white/10 backdrop-blur-sm text-gray-900"}`}>
      
 
         <div className='flex items-center '>    
@@ -24,7 +24,7 @@ const Navbar = () => {
       <div
   className={`
     flex items-center justify-center gap-6
-    text-gray-700 sm:text-sm transition-all duration-300
+    text-gray-900 sm:text-sm transition-all duration-300
 
     ${
       sidebaropen
@@ -35,16 +35,16 @@ const Navbar = () => {
     max-sm:fixed max-sm:top-16 max-sm:left-0
     max-sm:w-full max-sm:overflow-hidden
     max-sm:flex-col
-    max-sm:bg-emerald-800 max-sm:text-white
+    max-sm:bg-white max-sm:text-gray-900
     max-sm:pt-20
   `}
 >
    
-            <a href="#" className="sm:hover:border-b">Home</a>
-        <a href="#" className="sm:hover:border-b">About</a>
-        <a href="#services" className="sm:hover:border-b">Team</a>
-        <a href="#" className="sm:hover:border-b">Product</a>
-        <a href="#" className="sm:hover:border-b">contact</a>
+            <a href="#" className="text-gray-900 hover:text-emerald-600 sm:hover:border-b sm:hover:border-emerald-600">Home</a>
+        <a href="#" className="text-gray-900 hover:text-emerald-600 sm:hover:border-b sm:hover:border-emerald-600">About</a>
+        <a href="#services" className="text-gray-900 hover:text-emerald-600 sm:hover:border-b sm:hover:border-emerald-600">Team</a>
+        <a href="#" className="text-gray-900 hover:text-emerald-600 sm:hover:border-b sm:hover:border-emerald-600">Product</a>
+        <a href="#" className="text-gray-900 hover:text-emerald-600 sm:hover:border-b sm:hover:border-emerald-600">contact</a>
 
         </div>
          <div className="flex items-center gap-2 sm:gap-4 ">

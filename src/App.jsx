@@ -1,23 +1,18 @@
 import React from 'react'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Dashboard from './components/Layout/Dashboard'
+import HeroSection from './components/sections/Herosection'
 
 const App = () => {
   return (
-    <div >    
-      
-       <div className="flex flex-col min-h-screen">
-      <Navbar /> {/* fixed navbar */}
-
-      {/* Main content */}
-      <main className="flex-1 pt-16 pb-8">
-        <h1 className="text-3xl font-bold mb-4">Page 1</h1>
-        <p className='font-bold text-lg items-center'>update is coming..........</p>
-      </main>
-
-      <Footer />
-    </div>
-      </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Dashboard />}>
+          {/* Home page shows the HeroSection inside the dashboard layout */}
+          <Route index element={<HeroSection />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
