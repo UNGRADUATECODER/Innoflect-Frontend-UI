@@ -1,3 +1,8 @@
+
+import React from "react";
+
+
+
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-r from-slate-900 via-emerald-800 to-emerald-600 text-white">
