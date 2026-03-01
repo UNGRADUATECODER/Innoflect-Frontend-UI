@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+:root {
+  --footer-bg: 0 0% 6%;
+   --footer-foreground: 0 0% 100%;
+    --primary: 142 76% 36%;
+}
