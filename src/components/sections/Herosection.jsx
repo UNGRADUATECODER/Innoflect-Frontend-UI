@@ -1,5 +1,5 @@
 import React from "react";
-import HeroModel from "../HeroModel";
+
 
 const HeroSection = () => {
   return (

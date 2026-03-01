@@ -1,24 +1,39 @@
-import React from 'react'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Herosection from "./components/sections/Herosection";
+
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Team from "./pages/Team";
+import Contact from "./pages/Contact";
 
 const App = () => {
   return (
-    <div >    
-      
-       <div className="flex flex-col min-h-screen">
-      <Navbar /> {/* fixed navbar */}
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
 
-      {/* Main content */}
-      <main className="flex-1 pt-16 pb-8">
-        <h1 className="text-3xl font-bold mb-4">Page 1</h1>
-        <p className='font-bold text-lg items-center'>update is coming..........</p>
-      </main>
+    
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Herosection />
+              <About/>
+            </>
+          }
+        />
+        <Route path="/about" element={<About />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
 
       <Footer />
     </div>
-      </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

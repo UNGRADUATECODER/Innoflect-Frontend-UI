@@ -1,6 +1,7 @@
 import React from 'react'
 import { MapPin, Phone, Mail } from 'lucide-react'
 
+
 const Footer = () => {
   return (
     <footer className="container-custom">
@@ -67,7 +68,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="text-[hsl(var(--primary))] shrink-0 mt-1" size={18} />
-                <span className="text-[hsl(var(--footer-foreground)/0.7)] hover:text-[hsl(var(--primary))] ">
+                <span className="text-[hsl(var(--footer-foreground)/0.7)]  hover:text-[hsl(var(--primary))] ">
                   Flat no.111, Omm paradise apartment, Shampur, Bhubaneswar,
                   Odisha 751003, India
                 </span>
